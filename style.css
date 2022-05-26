@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+.wrapper {
+    max-width: 1400px;
+    display: flex;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.libros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.library {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: brown;
+    text-align: center;
+    color: white;
+    padding-top: 8% ;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+form>input {
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#submit {
+    background-color: brown;
+    color: white;
+}
