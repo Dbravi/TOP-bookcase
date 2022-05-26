@@ -14,30 +14,33 @@
         <div class="libros">
             <div class="libros-in">
                 <h1>Me falta leer</h1>
-                <form>
+                <div id="form">
                     <label for="fname"></label>
                     <input type="text" id="lname" name="libro" placeholder="Ingresa nombre del libro..">
 
                     <label for="lname"></label>
                     <input type="text" id="aname" name="autor" placeholder="Ingresa apellido del autor..">
 
-                    <input id="submit" type="submit" value="Submit">
-                </form>
+                    <input onclick="addBook()" id="submit" type="submit" value="Submit">
+                </div>
             </div>
 
             <div class="proxlect">
                 <h1>Próximas Lecturas</h1>
-            <!-- Doble hover: x eliminar, Marcar como leyendo, marcar como leìdo (pasa a "mis leìdos")on hover -->
-                <p></p>
+                <!-- Doble hover: x eliminar, Marcar como leyendo, marcar como leìdo (pasa a "mis leìdos")on hover -->
+                <div id="proxlect2">
+                    <p id="proximos"></p>
+                    <button id="leido" onclick="adr()"></button>
+                    <button id="eliminar"onclick="removeBook()""></button>
+                </div>
             </div>
         </div>
 
         <div class="library">
             <h1>Mis leídos 2022</h1>
-                <!-- Doble hover: tacho eliminar de lista (pasa a "mis leìdos), pasar a pròximas lecturas.
+            <!-- Doble hover: tacho eliminar de lista (pasa a "mis leìdos), pasar a pròximas lecturas.
                 sacar screenshot/compartir? -->
-
-            <h4></h4>
+            <h4 id="lecturas"></h4>
         </div>
     </div>
     <script src="js.js"></script>
