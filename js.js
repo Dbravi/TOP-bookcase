@@ -2,7 +2,7 @@ const cl = console.log
 
 let myProxLectures = [];
 let myYearReads = [];
-let newBook = ""
+let newBook = "";
 
 //Constructor
 function Book(title, author) {
@@ -10,29 +10,50 @@ function Book(title, author) {
   this.author = author
 }
 
+const $submit = document.getElementById("submit");
+$submit.addEventListener("click", addBook);
+
 //Recibe libros del input
 function addBook() {
   newBook = new Book(`${document.getElementById("lname").value}, ${document.getElementById("aname").value}`)
   showNextBC()
 }
 
+// const $h1= document.createElement("h1");
+// $h1.textContent="Este es un titulo";
+// $div= document.getElementById("div");
+// $div.appendChild($h1)
 
 
 //Agrega y muestra libros de "próximas lecturas"
 const showNextBC = function () {
-  myProxLectures.push(newBook)
-  const para = document.createElement("p");
-  para.innerText = newBook.title;
-  document.getElementById("proximos").append(para);
-
-  const buttonOk = document.createElement("button");
-  buttonOk.innerText = "V";
-  document.getElementById("leido").prepend(buttonOk);
-
-  const buttonDel = document.createElement("button");
-  buttonDel.innerText = "X";
-  document.getElementById("eliminar").prepend(buttonDel);
+  myProxLectures.push(newBook);
+  bookCreator();
 }
+
+
+
+const $proxlect2 = document.getElementById("proxlect2")
+
+const bookCreator = () => {
+  const $div = document.createElement("div");
+  const $p = document.createElement("p");
+  $p.textContent = `${newBook.title}`;
+  const $buttonV = document.createElement("button");
+  $buttonV.textContent = "V"
+  const $buttonF = document.createElement("button");
+  $buttonF.textContent = "F"
+  $proxlect2.appendChild($div);
+  $div.appendChild($p);
+  $div.appendChild($buttonV);
+  $div.appendChild($buttonF);
+  $divStyle=document.querySelector("div");
+  $divStyle.style.display="flex"
+  $buttonEvent = document.querySelector("button");
+  $buttonEvent.addEventListener("click", () => adr());
+}
+
+
 
 //Elimina libros de proximas Lecturas
 
@@ -51,5 +72,3 @@ const adr = function addReadBook() {
   para2.innerText = newBook.title;
   document.getElementById("lecturas").appendChild(para2);
 }
-
-console.log(myProxLectures)

@@ -34,29 +34,24 @@ h1 {
     text-align: center;
     justify-content: center;
 }
-
-
-.proxlect {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    height: 50%;
+#proxlect {
+    height: 50vh;
     background-color: white;
     color: black;
-    gap: 10px;
+    text-align: center;
 }
 
-#proxlect2 {
+#proxlect h1 {
+    padding: 20px;
+}
+
+#proxlect2 div {
     display: flex;
-    gap: 10px;
+    width: 100%;
     justify-content: center;
     align-items: center;
-}
-
-#proxlect2 p{
-    margin: 5px;
+    color: black;
+    gap: 5%;
 }
 
 .library {
@@ -88,6 +83,3 @@ form>input {
     color: white;
 }
 
-button {
-    display: block;
-}
